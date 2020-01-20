@@ -1,0 +1,17 @@
+
+# -----------------------------------------------------------------------------
+# Common Makefile configuration info
+# -----------------------------------------------------------------------------
+
+DEPS_INC_PATH=./deps/include
+DEPS_LIB_PATH=./deps/lib
+
+# ---
+# Dependency include paths
+# ---
+CPPFLAGS += -I$(DEPS_INC_PATH)
+
+# ---
+# Dependency library paths
+# ---
+LDFLAGS += -L$(DEPS_LIB_PATH)
