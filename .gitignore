@@ -1,3 +1,5 @@
 # compiled object files
 *.[oa]
 
+# examples
+game_loop

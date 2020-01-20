@@ -3,15 +3,15 @@
 # Common Makefile configuration info
 # -----------------------------------------------------------------------------
 
+# location of dependiencies
 DEPS_INC_PATH=./deps/include
 DEPS_LIB_PATH=./deps/lib
 
-# ---
-# Dependency include paths
-# ---
+# add dependency include path
 CPPFLAGS += -I$(DEPS_INC_PATH)
+# enable C++17 features
+CPPFLAGS += -std=c++17
 
-# ---
-# Dependency library paths
-# ---
+# add dependency library path
 LDFLAGS += -L$(DEPS_LIB_PATH)
+

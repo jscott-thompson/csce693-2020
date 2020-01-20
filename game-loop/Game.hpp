@@ -7,8 +7,8 @@
 class Game {
 
 public:
-   Game();
-   ~Game();
+   Game() = default;
+   ~Game() = default;
 
    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
    void handle_events();
@@ -16,12 +16,12 @@ public:
    void render();
    void clean();
 
-   bool running()    { return is_running; }
+   bool running()            { return is_running; }
 
 private:
    bool is_running{};
-   SDL_Window* window;
-   SDL_Renderer* renderer;
+   SDL_Window* window{};
+   SDL_Renderer* renderer{};
 };
 
 
