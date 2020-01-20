@@ -8,5 +8,5 @@ deps/src/lua-5.3.5/src/lua
 deps/src/lua-5.3.5/src/luac
 
 # examples
-game_loop
-sol_test
+game_loop/game_loop
+sol_test/sol_test
