@@ -1,5 +1,7 @@
 # compiled object files
 *.[oa]
+!deps/lib/liblua.a
+!deps/lib/libSDL2*
 
 # residue from building lua
 deps/src/lua-5.3.5/src/*.o
