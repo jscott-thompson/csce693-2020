@@ -1,5 +1,12 @@
 # compiled object files
 *.[oa]
 
+# residue from building lua
+deps/src/lua-5.3.5/src/*.o
+deps/src/lua-5.3.5/src/liblua.a
+deps/src/lua-5.3.5/src/lua
+deps/src/lua-5.3.5/src/luac
+
 # examples
 game_loop
+sol_test

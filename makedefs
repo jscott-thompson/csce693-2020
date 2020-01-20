@@ -4,8 +4,8 @@
 # -----------------------------------------------------------------------------
 
 # location of dependiencies
-DEPS_INC_PATH=./deps/include
-DEPS_LIB_PATH=./deps/lib
+DEPS_INC_PATH=../deps/include
+DEPS_LIB_PATH=../deps/lib
 
 # add dependency include path
 CPPFLAGS += -I$(DEPS_INC_PATH)

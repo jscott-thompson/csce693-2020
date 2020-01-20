@@ -8,12 +8,12 @@ OBJS = \
 	main.o \
 	Game.o
 
-LDFLAGS += -lSDL2
+LDFLAGS += -Bdynamic -lSDL2
 
 all: $(PGM)
 
 $(PGM): $(OBJS)
-	$(CXX) -o $@ $(OBJS) $(CFLAGS) $(LDFLAGS)
+	$(CXX) -o $@ $(OBJS) $(LDFLAGS)
 
 clean:
 	-rm -f *.o
