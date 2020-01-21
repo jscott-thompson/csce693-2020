@@ -7,9 +7,6 @@ PGM = sol_test
 OBJS = \
 	main.o
 
-CPPFLAGS += -I$(DEPS_INC_PATH)/lua5.3
-LDFLAGS += -Bstatic -llua
-
 all: $(PGM)
 
 $(PGM): $(OBJS)

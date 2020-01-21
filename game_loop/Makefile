@@ -8,8 +8,6 @@ OBJS = \
 	main.o \
 	Game.o
 
-LDFLAGS += -Bdynamic -lSDL2
-
 all: $(PGM)
 
 $(PGM): $(OBJS)
