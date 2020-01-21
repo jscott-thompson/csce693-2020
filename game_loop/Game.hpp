@@ -16,9 +16,10 @@ public:
    void render();
    void clean();
 
-   bool running()            { return is_running; }
+   bool running()                { return is_running; }
 
 private:
+   int counter{};
    bool is_running{};
    SDL_Window* window{};
    SDL_Renderer* renderer{};

@@ -40,7 +40,10 @@ void Game::handle_events()
 }
 
 void Game::update()
-{}
+{
+   // call Lua's function update() to increment a counter
+   // and print the returned value
+}
 
 void Game::render()
 {

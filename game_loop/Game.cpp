@@ -40,7 +40,10 @@ void Game::handle_events()
 }
 
 void Game::update()
-{}
+{
+   counter++;
+   std::cout << counter << std::endl;
+}
 
 void Game::render()
 {
