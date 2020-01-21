@@ -48,6 +48,7 @@ void Game::update()
 void Game::render()
 {
    SDL_RenderClear(renderer);
+   // this is where we would add stuff to render
    SDL_RenderPresent(renderer);
 }
 

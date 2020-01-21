@@ -54,6 +54,7 @@ void Game::render()
 void Game::clean()
 {
    SDL_DestroyRenderer(renderer);
+   // this is where we would add stuff to render
    SDL_DestroyWindow(window);
    std::cout << "Game cleaned..." << std::endl;
 }
