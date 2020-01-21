@@ -18,6 +18,5 @@ CPPFLAGS += -std=c++17
 LDFLAGS += -L$(DEPS_LIB_PATH)
 
 # all libraries to link against (SDL2 and Lua)
-LDFLAGS += -Bstatic -lSDL2 -lpthread -ldl
-LDFLAGS += -Bstatic -llua
+LDFLAGS += -Bstatic -lSDL2 -Bstatic -llua -lpthread -ldl
 

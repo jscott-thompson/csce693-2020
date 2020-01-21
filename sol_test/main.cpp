@@ -5,7 +5,12 @@
 
 int main() {
 
-   std::cout << "sol2 test" << std::endl;
+   std::cout << "=== opening a state ===" << std::endl;
+
+   sol::state lua;
+   lua.open_libraries(sol::lib::base, sol::lib::package);
+   lua.script("print('bark bark bark!')");
+   std::cout << std::endl;
    return 0;
 }
 
