@@ -1,3 +1,5 @@
+.vscode/
+
 # compiled object files
 *.[oa]
 !deps/lib/liblua.a

@@ -2,11 +2,12 @@
 #include "Game.hpp"
 
 #include <iostream>
+#include <memory>
 
 int main() {
 
    std::cout << "Creating game" << std::endl;
-   Game* game = new Game();
+   std::unique_ptr<Game> game = std::make_unique<Game>();
 
    game->init("1st Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
 
