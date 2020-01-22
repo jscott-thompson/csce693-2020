@@ -2,13 +2,12 @@
 #include "Game.hpp"
 
 #include <iostream>
+#include <memory>
 
 int main() {
 
    std::cout << "Creating game" << std::endl;
-   Game* game = new Game();
-
-   game->init("1st Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
+   auto game = std::make_unique<Game>("1st Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
 
    std::cout << "Starting game loop" << std::endl;
    while (game->running()) {
@@ -17,7 +16,6 @@ int main() {
       game->render();
    }
 
-   game->clean();
    return 0;
 }
 
