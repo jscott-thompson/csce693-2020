@@ -20,7 +20,7 @@ int main(int, char**) {
    std::cout << "SDL_GetTicks(): " << ticks << std::endl;
    std::cout << "SDL_GetPerformanceCounter(): " << count << std::endl;
    std::cout << "SDL_GetPerformanceFrequency(): " << freq << std::endl;
-   std::cout << "fib(35): " << fib(35) << std::endl;
+   std::cout << "fib(40): " << fib(40) << std::endl;
    std::cout << "Elasped [SDL_GetTick]: " << (SDL_GetTicks()-ticks)/1000.0f << " secs\n";
    std::cout << "Elasped [SDL_GetPerformanceCounter]: "
       << (SDL_GetPerformanceCounter()-count)/float(SDL_GetPerformanceFrequency()) << " secs\n";
