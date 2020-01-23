@@ -2,7 +2,7 @@
 #include <iostream>
 #include "SDL2/SDL.h"
 
-int fib(const int n) {
+int fib(int n) {
    if (n<=1) return n;
    return fib(n-1)+fib(n-2);
 }
@@ -20,7 +20,7 @@ int main(int, char**) {
    std::cout << "SDL_GetTicks(): " << ticks << std::endl;
    std::cout << "SDL_GetPerformanceCounter(): " << count << std::endl;
    std::cout << "SDL_GetPerformanceFrequency(): " << freq << std::endl;
-   std::cout << "fib(40): " << fib(40) << std::endl;
+   const int x{fib(40)}; std::cout << "fib(40): " << x << std::endl;
    std::cout << "Elasped [SDL_GetTick]: " << (SDL_GetTicks()-ticks)/1000.0f << " secs\n";
    std::cout << "Elasped [SDL_GetPerformanceCounter]: "
       << (SDL_GetPerformanceCounter()-count)/float(SDL_GetPerformanceFrequency()) << " secs\n";
