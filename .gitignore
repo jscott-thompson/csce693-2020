@@ -16,3 +16,4 @@ game_config/game_config
 game_logic/game_logic
 game_loop/game_loop
 sol_test/sol_test
+timer_test/timer_test
