@@ -13,6 +13,8 @@ CPPFLAGS += -I$(DEPS_INC_PATH)
 CPPFLAGS += -I$(DEPS_INC_PATH)/lua5.3
 # enable C++17 features
 CPPFLAGS += -std=c++17
+# optimization level
+CPPFLAGS += -O3
 
 # add dependency library path
 LDFLAGS += -L$(DEPS_LIB_PATH)

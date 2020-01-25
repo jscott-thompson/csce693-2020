@@ -53,7 +53,7 @@ Game::Game(const std::string config_file)
 
 }
 
-void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
+Game::Game(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
    Uint32 flags{};
    if (fullscreen) {
@@ -71,10 +71,18 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
          SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
          std::cout << "Renderer created..." << std::endl;
       }
-      is_running = true;
+   is_running = true;
    } else {
       is_running = false;
    }
+}
+
+Game::~Game()
+{
+   SDL_DestroyRenderer(renderer);
+   SDL_DestroyWindow(window);
+   SDL_Quit();
+   std::cout << "Game cleaned..." << std::endl;
 }
 
 void Game::handle_events()
@@ -115,5 +123,3 @@ Game::~Game()
    this->clean();
 
 }
-
-
