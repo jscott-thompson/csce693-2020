@@ -3,12 +3,14 @@
 #define __GAME_HPP__
 
 #include "SDL2/SDL.h"
+#include <string>
 
 class Game {
 
 public:
    Game() = default;
-   ~Game() = default;
+   ~Game();
+   Game(const std::string config_file);
 
    void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
    void handle_events();
