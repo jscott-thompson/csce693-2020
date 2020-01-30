@@ -89,7 +89,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 void Game::init_logic(const std::string logic_file)
 {
    std::cout << "Preparing to load logic" << std::endl;
-   lua.load_file(logic_file);
+   lua.script_file(logic_file);
 
    std::cout << "Logic loaded. Preparing to grab logic" << std::endl;
    user_logic = lua["update"];
