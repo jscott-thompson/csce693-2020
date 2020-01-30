@@ -6,16 +6,13 @@
 #include "sol/sol.hpp"
 #include <string>
 
-// class sol::state;
-
 class Game {
 
 public:
    Game() = default;
    ~Game();
-   Game(const std::string config_file, const std::string logic_file);
+   Game(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 
-   void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
    void init_logic(const std::string logic_file);
    void handle_events();
    void update();
@@ -28,8 +25,7 @@ private:
    bool is_running{};
    SDL_Window* window{};
    SDL_Renderer* renderer{};
-   sol::state lua;
-   sol::function user_logic;
+   sol::state lua{};
 };
 
 #endif
