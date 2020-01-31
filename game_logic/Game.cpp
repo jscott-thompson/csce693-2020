@@ -1,6 +1,9 @@
 
+#define SOL_ALL_SAFETIES_ON 1
 #include "Game.hpp"
 #include <iostream>
+#include "sol/sol.hpp"
+#include <string>
 
 Game::Game(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
@@ -24,6 +27,11 @@ Game::Game(const char* title, int xpos, int ypos, int width, int height, bool fu
    } else {
       is_running = false;
    }
+}
+
+void Game::init_logic(const std::string logic_file)
+{
+   lua.script_file(logic_file);
 }
 
 Game::~Game()
@@ -51,6 +59,7 @@ void Game::update()
 {
    // call Lua's function update() to increment a counter
    // and print the returned value
+   std::cout << static_cast<int>( lua["update"]() ) << std::endl;
 }
 
 void Game::render()
